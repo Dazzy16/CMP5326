@@ -1,7 +1,8 @@
 import re
-email_pattern = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+
 with open("/Users/dazzy/Documents/GitHub/CMP5326/week1code/lab1example.txt", "r") as file:
     text = file.read()
 
+email_pattern = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
 emails = re.findall(email_pattern, text)
 print(emails)   
